@@ -1,0 +1,30 @@
+Joseph Rowley
+Program 2
+CS 101
+Winter 2013
+
+I was unable to successfully modify the program to make it work using the heap
+data structure. I correctly implemented a minHeap data structure and it’s
+associated methods fairly quickly - within 2 hours - but actually incorporating
+into the existing program proved too time consuming for me - I spent close to
+10-15 hours on it to no avail. 
+
+Both the original program and the new program rely on a 2D array to keep track
+of collisions between balls. The first implementation of the program required a
+series of auxiliary arrays to be filled for each row of the 2D array. Then the
+min of this array was calculated to find the soonest collision. This requires
+O(n^2) time to compute. The minHeap reduces this time by automatically keeping
+the minimum element. Retrieving the element costs O(1) time since it only
+requires accessing element zero of the Heap Array. To insert a new element to
+the minHeap, in this case a collision object with time as it’s sorting value, we
+must add a new element to the tree in the correct heap structure order. This is
+always the last element of the array that is not null, or right of the last node
+at the deepest depth on the tree. Then we must satisfy the order property by
+comparing the given element with its parent. If the child element is smaller
+than the parent we swap them, and we continue this until the order property is
+satisfied. Then we have to compare the parent element in a similar fashion until
+it finds its place. The heap is a perfectly balanced tree with height of O(log_2
+n) at most, so we must spend O(log_2 n) comparisons in the worst case. Deleting
+the top element requires a similar method and requires O(log_2 n) comparisons.
+In the worst case, we have n calls to removeMin, which is O(log_2 n), thus we
+have a worst case for this implementation of O(nlog_2 n). 

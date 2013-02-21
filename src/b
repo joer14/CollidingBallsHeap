@@ -1,0 +1,3 @@
+#!/bin/bash
+javac /Volumes/BLAZER/src/*.java
+java CollidingBalls data1

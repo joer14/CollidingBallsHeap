@@ -3,12 +3,6 @@ Program 2
 CS 101
 Winter 2013
 
-I was unable to successfully modify the program to make it work using the heap
-data structure. I correctly implemented a minHeap data structure and it’s
-associated methods fairly quickly - within 2 hours - but actually incorporating
-into the existing program proved too time consuming for me - I spent close to
-10-15 hours on it to no avail. 
-
 Both the original program and the new program rely on a 2D array to keep track
 of collisions between balls. The first implementation of the program required a
 series of auxiliary arrays to be filled for each row of the 2D array. Then the
